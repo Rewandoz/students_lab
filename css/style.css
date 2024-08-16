@@ -1,0 +1,431 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 600px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.main-header {
+    font-size: 40px;
+    font-weight: 500;
+    width: fit-content;
+    border-bottom: solid 2px #D22727;
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+a.more {
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: normal;
+    padding: 10px 30px;
+    background: linear-gradient(90deg, #2E7AC0, #D22727);
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.boxes {
+    display: grid;
+    gap: 20px;
+}
+.small {
+    grid-template-columns: repeat(auto-fill, minmax(265px, 1fr));
+}
+.large {
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+}
+.container .boxes .box {
+    text-align: center;
+}
+.container .boxes .box img {
+    width: 100%;
+}
+.container .boxes .box h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.container .boxes .box a {
+    padding: 7px 33px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 6px;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: normal;
+}
+.container .boxes .box a.red {
+    background-color: #D22727;
+}
+.container .boxes .box a.blue {
+    background-color: #2E7AC0;
+}
+.pages_background {
+    background-image: url(../images/pages_cover.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.pages_background::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.80);
+}
+.pages_background h1 {
+    position: relative;
+    color: white;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+header {
+    background-color: white;
+    position: relative;
+}
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
+header .container img {
+    width: 180px;
+}
+header .container ul {
+    list-style: none;
+    display: flex;
+}
+@media (max-width: 991px) {
+    header .container ul {
+        position: absolute;
+        flex-direction: column;
+        background-color: #e7e7e7;
+        z-index: 100;
+        right: 0;
+        top: 64px;
+        width: 100%;
+        padding-right: 40px;
+        display: none;
+    }
+}
+header .container ul li:not(:last-child) {
+    margin-right: 30px;
+}
+@media (max-width: 991px) {
+    header .container ul li:not(:last-child) {
+        margin-right: 0;
+    }
+}
+header .container ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    transition-duration: 0.3s;
+}
+@media (max-width: 991px) {
+    header .container ul li a {
+        display: block;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    header .container ul li:not(:last-child) a {
+        border-bottom: solid 1px;
+    }
+}
+header .container ul li a:hover {
+    color: #D22727;
+}
+header .container ul li .active {
+    color: #D22727;
+    position: relative;
+}
+header .container ul li .active::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #D22727;
+    left: 0;
+    bottom: -10px;
+}
+@media (max-width: 991px) {
+    header .container ul li .active::after {
+        display: none;
+    }
+}
+header .borgger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+}
+@media (max-width: 991px) {
+    header .borgger-menu {
+        display: flex;
+    }
+    header .container .links:hover ul {
+        display: block;
+    }
+}
+header .borgger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+}
+header .borgger-menu span:nth-child(2) {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.landing-section {
+    position: relative;
+    height: calc(100vh - 80px);
+    background-image: url(../images/landing-section.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.landing-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+.landing-section .container .content {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.landing-section .container .content .name {
+    color: #414141;
+    margin-bottom: -30px;
+}
+.landing-section .container .content h1 {
+    color: white;
+    font-weight: 500;
+    width: 500px;
+    font-size: 50px;
+    line-height: normal;
+}
+.landing-section .container .content .buttons {
+    display: flex;
+    align-items: center;
+}
+.landing-section .container .content .buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+.landing-section .container .content .buttons .blue {
+    background-color: #2E7AC0;
+    margin-right: 20px;
+}
+.landing-section .container .content .buttons .red {
+    background-color: #D22727;
+}
+.courses {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.courses .container .boxes {
+    margin-bottom: 50px;
+}
+.courses .container .boxes .box .language {
+    font-size: 14px;
+    color: #545454;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.courses .container .boxes .box .language span {
+    color: black;
+    font-weight: 600;
+}
+.notes {
+    background-image: url(../images/Note_section_background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    position: relative;
+}
+.notes::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.90);
+}
+.notes .container {
+    position: relative;
+    z-index: 1;
+}
+.notes .container .boxes {
+    margin-bottom: 50px;
+}
+.documents {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.documents .container .boxes {
+    margin-bottom: 50px;
+}
+footer {
+    padding: 20px;
+    background-color: #1A1A1A;
+}
+footer div {
+    color: white;
+    text-align: center;
+}
+footer div a {
+    text-decoration: none;
+    color: #2E7AC0;
+    margin-left: 5px;
+}
+.notes_page {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.notes_INS_page {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.notes_INS_first {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.notes_INS_second {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.notes_INS_third {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.notes_INS_fourth {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.exams_page {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.exams_INS_page {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.exams_INS_first {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.exams_INS_second {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.exams_INS_third {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.exams_INS_fourth {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.courses_page {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.courses_page .container .boxes .box .language {
+    font-size: 14px;
+    color: #545454;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.courses_page .container .boxes .box .language span {
+    color: black;
+    font-weight: 600;
+}
+.documents_page {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.books_page .container .soon {
+    background-color: black;
+    width: 550px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 40px;
+    font-weight: 600;
+    margin: 50px auto;
+}
+.activities_page .container .soon {
+    background-color: black;
+    width: 550px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 40px;
+    font-weight: 600;
+    margin: 50px auto;
+}
