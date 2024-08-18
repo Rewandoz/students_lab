@@ -340,6 +340,11 @@ a.red {
     font-weight: 600;
     z-index: 1;
 }
+@media (max-width: 767px) {
+    .pages_background h1 {
+        font-size: 38px;
+    }
+}
 /* Component */
 .courses .container .boxes .box .language {
     font-size: 14px;
